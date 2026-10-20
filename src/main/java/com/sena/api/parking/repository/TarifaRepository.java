@@ -22,7 +22,7 @@ public interface TarifaRepository extends JpaRepository<Tarifa, Long> {
 	boolean existsByTipoAndVigenteHastaIsNull(@Param("tipo") TipoVeiculo tipo);
 	
 	Optional<Tarifa> findfirstByTipoAndVigenteHastaIsNull(TipoVeiculo tipo);
-	List<com.sena.api.parking.model.Tarifa> findAllByTipoAscVigenteDesdeDesc();
+	List<Tarifa> findAllByTipoAscVigenteDesdeDesc();
 
 	@Lock(LockModeType.PESSIMISTIC_WRITE)
 	@Query("select t from Tarifa t where t.tipo = :tipo and t.vigenteHasta is null")
