@@ -23,7 +23,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RegsitroParqueo {
+public class RegistroParqueo {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,11 @@ public class RegsitroParqueo {
 	private EspacioParqueo espacio;
 	@Column(nullable = false)
 	private LocalDateTime fechaEntra;
-	private LocalDateTime fechasalida;
+	private LocalDateTime fechaSalida;
 	private Double valorpagado;
+	public Object getVehiculo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

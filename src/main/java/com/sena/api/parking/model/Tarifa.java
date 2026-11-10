@@ -32,7 +32,7 @@ public class Tarifa {
 	private Long id_tarifa;
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-	private TipoVeiculo tipo;
+	private TipoVehiculo tipo;
 	@Column(nullable = false)
 	private Long valorHora;
 	@Column(nullable = false)

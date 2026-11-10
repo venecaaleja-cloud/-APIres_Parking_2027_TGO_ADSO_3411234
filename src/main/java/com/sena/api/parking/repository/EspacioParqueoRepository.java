@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 import com.sena.api.parking.model.EspacioParqueo;
 import com.sena.api.parking.model.EstadoEspacio;
-import com.sena.api.parking.model.TipoVeiculo;
+import com.sena.api.parking.model.TipoVehiculo;
 
 import jakarta.persistence.LockModeType;
 
@@ -19,7 +19,7 @@ public interface EspacioParqueoRepository  extends JpaRepository<EspacioParqueo,
 	boolean existsByNumero(@Param("numero") Integer numero);
 	
 	@Lock(LockModeType.PESSIMISTIC_WRITE)
-	Optional<EspacioParqueo> findFirstByTipoAndEstadoOrderByNumeroAsc(TipoVeiculo tipo, EstadoEspacio estado);
+	Optional<EspacioParqueo> findFirstByTipoAndEstadoOrderByNumeroAsc(TipoVehiculo tipo, EstadoEspacio estado);
 	
 	@Lock(LockModeType.PESSIMISTIC_WRITE)
 	@Query("Select e from EspacioParqueo e where e.numero = :numero")

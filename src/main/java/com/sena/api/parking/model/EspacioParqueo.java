@@ -19,7 +19,7 @@ public class EspacioParqueo {
    private Integer numero;
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-   private TipoVeiculo tipo;
+   private TipoVehiculo tipo;
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	@Builder.Default

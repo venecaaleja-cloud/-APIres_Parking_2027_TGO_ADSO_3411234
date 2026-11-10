@@ -34,10 +34,10 @@ public class Vehiculo {
 	private String placa;
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-	private TipoVeiculo tipo;
+	private TipoVehiculo tipo;
 	@Lob
 	private String descripcion;
 	@OneToMany(mappedBy = "vehiculo")
-	private List<RegsitroParqueo> registro;
+	private List<RegistroParqueo> registro;
 
 }
